@@ -1,0 +1,45 @@
+name: 2ti-lmailer
+base: core24
+version: '1.0.0'
+summary: Native Linux Email, Calendar & Local Ollama AI Agent (30 Days Free Usage)
+description: |
+  2TI LMailer is a modern, privacy-first desktop groupware suite built for ZorinOS,
+  Debian, and Ubuntu with a Rust native core and Tauri v2 (~28 MB RAM).
+
+  Includes 30 Days Free Usage during pre-release evaluation—generate your instant
+  Ed25519 evaluation key at https://2tinteractive.com/apps/portal.
+
+  - 30 Days Free Usage with instant self-service Ed25519 evaluation key
+  - Multi-account IMAP/SMTP inbox with adaptive Dark & Light Theme contrast
+  - Zero-Cloud Local Ollama AI sidebar (localhost:11434) for thread summarization & RAG
+  - Bidirectional CalDAV calendar and CardDAV contacts dossier
+  - ArtCraft MCP & CLI workflow bridge for local desktop automation
+
+grade: stable
+confinement: strict
+license: Proprietary
+website: https://2tinteractive.com/apps/lmailer/
+contact: https://2tinteractive.com/apps/portal#report-issue
+issues: https://2tinteractive.com/apps/portal#report-issue
+
+apps:
+  2ti-lmailer:
+    command: usr/bin/2ti-lmailer
+    desktop: usr/share/applications/2ti-lmailer.desktop
+    common-id: com.tinteractive2.lmailer
+    extensions: [gnome]
+    plugs:
+      - network
+      - network-bind
+      - home
+      - desktop
+      - desktop-legacy
+      - wayland
+      - x11
+      - opengl
+
+parts:
+  lmailer:
+    plugin: dump
+    source: https://2tinteractive.com/apps/releases/2ti-lmailer-latest-amd64.deb
+    source-type: deb

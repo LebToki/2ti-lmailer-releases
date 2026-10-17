@@ -1,0 +1,32 @@
+app-id: com.tinteractive2.lmailer
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
+command: 2ti-lmailer
+
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --share=network
+  - --filesystem=xdg-download
+
+modules:
+  - name: 2ti-lmailer
+    buildsystem: simple
+    build-commands:
+      - ar x 2ti-lmailer_1.0.0_amd64.deb
+      - tar -xf data.tar.*
+      - cp -r usr/bin usr/lib usr/share /app/
+      - sed -i 's|/usr/lib/2ti-lmailer|/app/lib/2ti-lmailer|g' /app/bin/2ti-lmailer || true
+      - install -Dm644 usr/share/metainfo/com.tinteractive2.lmailer.metainfo.xml /app/share/metainfo/com.tinteractive2.lmailer.metainfo.xml
+      - install -Dm644 usr/share/applications/2ti-lmailer.desktop /app/share/applications/com.tinteractive2.lmailer.desktop
+    sources:
+      - type: extra-data
+        filename: 2ti-lmailer_1.0.0_amd64.deb
+        url: https://2tinteractive.com/apps/releases/2ti-lmailer_1.0.0_amd64.deb
+        sha256: b2ec33b99d73d506b57d8fd9407ebf8fef63d7f221a96d9d52550d9f76706990
+        size: 2862186
+        only-arches:
+          - x86_64

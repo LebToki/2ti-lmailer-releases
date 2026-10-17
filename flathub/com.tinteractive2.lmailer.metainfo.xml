@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.tinteractive2.lmailer</id>
+  <name>2TI LMailer</name>
+  <summary>Native Linux Email, Calendar &amp; Local Ollama AI Agent Suite (30 Days Free Usage)</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary=https://2tinteractive.com/apps/portal</project_license>
+  <developer id="com.tinteractive2">
+    <name>2TInteractive</name>
+  </developer>
+  <url type="homepage">https://2tinteractive.com/apps/lmailer/</url>
+  <url type="help">https://2tinteractive.com/apps/lmailer/kb</url>
+  <url type="bugtracker">https://2tinteractive.com/apps/portal#report-issue</url>
+  <url type="donation">https://2tinteractive.com/apps/portal</url>
+  <description>
+    <p>
+      2TI LMailer is a fast, privacy-first desktop groupware and communications suite built for ZorinOS, Debian, and Ubuntu with a native Rust core and Tauri v2 (~28 MB RAM). Includes 30 Days Free Usage during pre-release evaluation with an instant self-service Ed25519 evaluation key from the 2TInteractive License Portal.
+    </p>
+    <p>
+      Core capabilities:
+    </p>
+    <ul>
+      <li>30 Days Free Usage with instant self-service Ed25519 evaluation key and seat manager</li>
+      <li>Unified IMAP/SMTP multi-account inbox with adaptive Dark &amp; Light Theme contrast</li>
+      <li>Zero-Cloud Local Ollama AI sidebar (localhost:11434) for thread summarization, RAG search, and tone-aware replies</li>
+      <li>Integrated bidirectional CalDAV calendar and CardDAV contact dossier</li>
+      <li>Rich HTML signature editor and automated client-side mail rule engine</li>
+      <li>ArtCraft MCP &amp; CLI workflow bridge for local desktop automation</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">2ti-lmailer.desktop</launchable>
+  <provides>
+    <binary>2ti-lmailer</binary>
+    <binary>lmailer</binary>
+  </provides>
+  <screenshots>
+    <screenshot type="default">
+      <caption>2TI LMailer Unified Inbox and Local Ollama AI Agent Sidebar</caption>
+      <image>https://2tinteractive.com/apps/assets/lmailer-inbox.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Zero-Cloud Local Ollama RAG &amp; Thread Summarization</caption>
+      <image>https://2tinteractive.com/apps/assets/lmailer-ollama.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Bidirectional CalDAV Calendar</caption>
+      <image>https://2tinteractive.com/apps/assets/lmailer-calendar.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>CardDAV Contacts &amp; Communication History</caption>
+      <image>https://2tinteractive.com/apps/assets/lmailer-contacts.png</image>
+    </screenshot>
+  </screenshots>
+  <categories>
+    <category>Network</category>
+    <category>Email</category>
+    <category>Office</category>
+    <category>Calendar</category>
+    <category>ContactManagement</category>
+  </categories>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="1.0.0" date="2026-10-17">
+      <description>
+        <p>Pre-release 1.0.0 with 30 Days Free Usage, adaptive Dark &amp; Light Theme HTML email contrast engine, branded 2TI LMailer identity, Ed25519 offline licensing, and Local Ollama RAG sidebar.</p>
+      </description>
+    </release>
+  </releases>
+</component>
